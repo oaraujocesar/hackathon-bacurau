@@ -1,0 +1,26 @@
+/* 
+  Rules
+    types      - color, font, size
+    context    - error, succes, warning, active, desactive, disabled, primary...
+    component  - input, button, tag
+    specific   - attributes, placeholder
+    status     - active, focus, hover 
+    variables  - [type]-[context]-[component]-[specific]-[status]
+    */
+/**
+ * @tokens Colors
+ * @presenter Color
+ */
+
+/* [type]-[context]-[component]-[specific]-[status] */
+/*  color -  dark  -  button   -  outline -  hover  */
+
+/*========================== COLORS ==========================*/
+
+/* [type]-[context]  */
+
+$color-primary: #3d2093;
+$color-primary-dark: #2f1872;
+$color-primary-light: #6236ff;
+$color-primary-lighter: #d0c5ff;
+$color-secondary: #dc0f95;
