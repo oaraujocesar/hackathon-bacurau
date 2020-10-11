@@ -1,8 +1,56 @@
 {
-  "Logo": {
-    "description": "Auto imported from components/Logo.vue"
+  "Button": {
+    "description": "Auto imported from components/atoms/button/index.vue"
   },
-  "LazyLogo": {
-    "description": "Auto imported from components/Logo.vue"
+  "LazyButton": {
+    "description": "Auto imported from components/atoms/button/index.vue"
+  },
+  "Input": {
+    "description": "Auto imported from components/atoms/input/index.vue"
+  },
+  "LazyInput": {
+    "description": "Auto imported from components/atoms/input/index.vue"
+  },
+  "Title": {
+    "description": "Auto imported from components/atoms/title/index.vue"
+  },
+  "LazyTitle": {
+    "description": "Auto imported from components/atoms/title/index.vue"
+  },
+  "CategoriesCard": {
+    "description": "Auto imported from components/molecules/categories-card/index.vue"
+  },
+  "LazyCategoriesCard": {
+    "description": "Auto imported from components/molecules/categories-card/index.vue"
+  },
+  "Menu": {
+    "description": "Auto imported from components/molecules/menu/index.vue"
+  },
+  "LazyMenu": {
+    "description": "Auto imported from components/molecules/menu/index.vue"
+  },
+  "Textfield": {
+    "description": "Auto imported from components/molecules/textfield/index.vue"
+  },
+  "LazyTextfield": {
+    "description": "Auto imported from components/molecules/textfield/index.vue"
+  },
+  "FormAuth": {
+    "description": "Auto imported from components/organisms/form-auth/index.vue"
+  },
+  "LazyFormAuth": {
+    "description": "Auto imported from components/organisms/form-auth/index.vue"
+  },
+  "HomeContent": {
+    "description": "Auto imported from components/organisms/home-content/index.vue"
+  },
+  "LazyHomeContent": {
+    "description": "Auto imported from components/organisms/home-content/index.vue"
+  },
+  "Sidebar": {
+    "description": "Auto imported from components/organisms/sidebar/index.vue"
+  },
+  "LazySidebar": {
+    "description": "Auto imported from components/organisms/sidebar/index.vue"
   }
 }

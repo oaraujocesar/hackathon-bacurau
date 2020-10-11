@@ -5,9 +5,12 @@ import NuxtError from './components/nuxt-error.vue'
 import NuxtLoading from './components/nuxt-loading.vue'
 import NuxtBuildIndicator from './components/nuxt-build-indicator'
 
-import _6f6c098b from '../layouts/default.vue'
+import '../components/bosons/variables-and-mixins.scss'
 
-const layouts = { "_default": sanitizeComponent(_6f6c098b) }
+import _6f6c098b from '../layouts/default.vue'
+import _2d2495d5 from '../layouts/home.vue'
+
+const layouts = { "_default": sanitizeComponent(_6f6c098b),"_home": sanitizeComponent(_2d2495d5) }
 
 export default {
   render (h, props) {

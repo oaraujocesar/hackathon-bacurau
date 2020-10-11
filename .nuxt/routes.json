@@ -1,5 +1,12 @@
 [
   {
+    "name": "home",
+    "path": "/home",
+    "component": "/Users/pedro/hackathon-bacurau/pages/home/index.vue",
+    "chunkName": "pages/home/index",
+    "_name": "_6751155c"
+  },
+  {
     "name": "index",
     "path": "/",
     "component": "/Users/pedro/hackathon-bacurau/pages/index.vue",

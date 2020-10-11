@@ -34,12 +34,15 @@ export default {
   ** Global CSS
   */
   css: [
+    '~components/bosons/variables-and-mixins.scss'
   ],
   /*
   ** Plugins to load before mounting the App
   ** https://nuxtjs.org/guide/plugins
   */
   plugins: [
+    { src: '@/plugins/notifications', ssr: false },
+    { src: '@/plugins/vuex-persist', ssr: false },
   ],
   /*
   ** Auto import components
@@ -50,6 +53,7 @@ export default {
   ** Nuxt.js dev-modules
   */
   buildModules: [
+    '@nuxtjs/eslint-module',
   ],
   /*
   ** Nuxt.js modules
@@ -60,8 +64,14 @@ export default {
     scss: ['components/bosons/*.scss'],
   },
 
+  axios: {
+    baseURL: process.env.API_URL || 'https://hackathon-bacurau-api.herokuapp.com/v1',
+    proxy: false,
+  },
+
   modules: [
     '@nuxtjs/axios',
+    '@nuxtjs/style-resources',
   ],
   /*
   ** Build configuration
