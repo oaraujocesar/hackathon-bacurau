@@ -91,7 +91,6 @@ export default {
         taskname: this.taskname,
         concluded: false,
       }]
-      this.clearTaskInput()
     },
     checkHandler(id){
       let position
@@ -105,9 +104,6 @@ export default {
         taskname: subgoalObj.taskname,
         concluded: true,
       })
-    },
-    clearTaskInput(){
-      this.taskname = ''
     }
   },
   computed: {

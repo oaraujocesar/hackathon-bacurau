@@ -99,7 +99,6 @@ computed: {
         height: 155px;
         border-radius: 50%;
         border: 6px solid #FFD700;
-
         position: relative;
 
         .level {
@@ -120,4 +119,12 @@ computed: {
       }
     }
   }
+</style>
+<style lang="scss">
+.podium {
+  .avatar-wrapper {
+    background: url('https://api.adorable.io/avatars/186/brenobioriful@lindo.png') no-repeat !important;
+    background-size: cover !important;
+  }
+}
 </style>

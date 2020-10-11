@@ -29,6 +29,12 @@
   "LazyMyGoalCard": {
     "description": "Auto imported from components/atoms/my-goal-card/index.vue"
   },
+  "PodiumItem": {
+    "description": "Auto imported from components/atoms/podium-item/index.vue"
+  },
+  "LazyPodiumItem": {
+    "description": "Auto imported from components/atoms/podium-item/index.vue"
+  },
   "PublicGoalCard": {
     "description": "Auto imported from components/atoms/public-goal-card/index.vue"
   },
@@ -40,12 +46,6 @@
   },
   "LazySubgoal": {
     "description": "Auto imported from components/atoms/subgoal/index.vue"
-  },
-  "PodiumItem": {
-    "description": "Auto imported from components/atoms/podium-item/index.vue"
-  },
-  "LazyPodiumItem": {
-    "description": "Auto imported from components/atoms/podium-item/index.vue"
   },
   "Title": {
     "description": "Auto imported from components/atoms/title/index.vue"

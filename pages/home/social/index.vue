@@ -1,6 +1,6 @@
 <template>
   <div class="main">
-    <Title internal label="Saúde Educacional" />
+    <Title internal label="Saúde Social" />
 
     <div class="wrapper">
       <section class="my-goals-container">
@@ -174,7 +174,6 @@ export default {
         }]
         
       }
-      this.hide()
     },
     handleComment(goal, index, value){
       const rawDate = new Date()

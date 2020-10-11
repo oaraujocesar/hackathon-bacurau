@@ -1,7 +1,7 @@
 <template>
   <div class="task">
     <label :for="'id-' + id">
-      <input type="checkbox" :disabled="isConcluded || concluded" @change="checkHandler" :checked="isConcluded || concluded" :name="id" :id="'id-' + id" />
+      <input type="checkbox" :disabled="isConcluded || concluded" @change="$emit('finish', id)" :checked="isConcluded || concluded" :name="id" :id="'id-' + id" />
       <p :style="isConcluded || concluded ? 'color: #909090; text-decoration: line-through;' : null">{{text}}</p>
     </label>
     <div class="control">
@@ -18,9 +18,6 @@ export default {
       title: 'EducaMind | Sua meta'
     }
   },
-  data: () => ({
-    isConcluded: false
-  }),
   props: {
     text: {
       type: String,
@@ -34,6 +31,10 @@ export default {
       type: String,
       default: () => '',
     },
+    isConcluded: {
+      type: Boolean,
+      default: () => false,
+    }
   },
   computed: {
     controlText() {

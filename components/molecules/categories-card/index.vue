@@ -65,7 +65,8 @@ export default {
       border-radius: 10px;
       display: flex;
       align-items: center;
-      justify-content: center;
+      min-height: 457px;
+      justify-content: space-between;
       flex-direction: column;
       padding: 25px 23px;
 
