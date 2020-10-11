@@ -2,14 +2,14 @@
   <section class="comment">
     <div class="user-info-wrapper">
       <div class="user-info" :style="{background: 'url(' + commentAvatar + ')', backgroundSize: '70px'}">
-    </div>
-    <div class="user-data">
-      <h4 class="username">{{username}}</h4>
-      <span class="commment-info">{{commentInfo}}</span>
-    </div>
+      </div>
+      <div class="user-data">
+        <h4 class="username">{{username}}</h4>
+        <span class="commment-info">{{commentInfo}}</span>
+      </div>
     </div>
     <div class="commentContent">
-      <span class="comment">{{commentContent}}</span>
+      <span>{{commentContent}}</span>
     </div>
   </section>
 </template>
@@ -33,7 +33,7 @@ export default {
     commentContent: {
       type: String,
       default: () => '',
-    }
+    },
   }
 }
 </script>
@@ -55,14 +55,14 @@ export default {
     .user-info {
       border: 3px solid $color-blue;
       border-radius: 50%;
-      height: 70px;
-      width: 70px;
+      padding: 30px;
+      margin-right: 15px;
       background-size: contain;
     }
 
     .username {
       color: $color-blue;
-      @include paragraph(16, 700);
+      @include paragraph(14, 700);
       letter-spacing: -1.2;
     }
 
@@ -70,6 +70,12 @@ export default {
       color: $color-blue;
       @include paragraph(15);
       letter-spacing: -0.9;
+      text-align: left;
+    }
+
+    .commentContent {
+      @include paragraph(15);
+      color: $color-primary;
     }
   }
 </style>

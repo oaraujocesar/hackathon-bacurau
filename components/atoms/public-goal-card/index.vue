@@ -34,7 +34,7 @@
       </div>
     </div>
 
-      <modal v-if="!goalInterna" width="800" class="modal" height="auto" styles="border-radius: 15px; text-align: center; padding: 84px 60px 72px 60px" :name="index">
+      <modal v-if="!goalInterna" width="927" class="modal" height="auto" styles="border-radius: 15px; text-align: center; padding: 84px 60px 72px 60px" :name="index">
         <client-only>
           <div class="modal-header">
                <div class="avatar">

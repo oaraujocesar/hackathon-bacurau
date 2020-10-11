@@ -1,11 +1,11 @@
 <template>
   <div class="task">
     <label :for="'id-' + id">
-      <input type="checkbox" :checked="concluded" :name="id" :id="'id-' + id" />
-      <p :style="concluded ? 'color: #909090; text-decoration: line-through;' : null">Texto em branco, no caderno de maria</p>
+      <input type="checkbox" :disabled="isConcluded || concluded" @change="checkHandler" :checked="isConcluded || concluded" :name="id" :id="'id-' + id" />
+      <p :style="isConcluded || concluded ? 'color: #909090; text-decoration: line-through;' : null">Texto em branco, no caderno de maria</p>
     </label>
     <div class="control">
-      <span :style="concluded ? 'color: #167070' : null" @click="!concluded ? conclude() : null">{{ controlText }}</span>
+      <span :style="isConcluded || concluded ? 'color: #167070; cursor: initial' : null" @click="!isConcluded || !concluded? remove() : null">{{ controlText }}</span>
     </div>
   </div>
 </template>
@@ -13,6 +13,14 @@
 <script>
 export default {
   name: 'Task',
+  head() {
+    return {
+      title: 'EducaMind | Sua meta'
+    }
+  },
+  data: () => ({
+    isConcluded: false
+  }),
   props: {
     text: {
       type: String,
@@ -29,12 +37,15 @@ export default {
   },
   computed: {
     controlText() {
-      return this.concluded ? 'Concluído' : 'Remover'
+      return this.concluded || this.isConcluded ? 'Concluído' : 'Remover'
     },
   },
   methods: {
-    conclude() {
+    remove() {
       console.log('concluir')
+    },
+    checkHandler() {
+      this.isConcluded = true
     }
   }
 }

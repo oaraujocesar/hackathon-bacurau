@@ -15,15 +15,15 @@
         <h4>Nova tarefa</h4>
 
         <label>
-          <input type="radio" name="radio-goal" id="" />
+          <input type="radio" value="curto" v-model="estimative" name="radio-goal" id="" />
           Curto prazo
         </label>
         <label>
-          <input type="radio" name="radio-goal" id="" />
+          <input type="radio" value="medio" v-model="estimative" name="radio-goal" id="" />
           Médio prazo
         </label>
         <label>
-          <input type="radio" name="radio-goal" id="" />
+          <input type="radio" value="longo" v-model="estimative" name="radio-goal" id="" />
           Longo prazo
         </label>
 
@@ -31,11 +31,12 @@
           <input
             type="text"
             name="subitem"
+            v-model="taskname"
             id=""
             placeholder="Nome da tarefa"
           />
           <div class="btn-wrapper">
-            <Button label="Adicionar" />
+            <Button @click="sendTask" label="Adicionar" />
           </div>
         </div>
       </div>
@@ -70,6 +71,15 @@
 <script>
 export default {
   layout: 'home',
+  data: () => ({
+    estimative: '',
+    taskname: ''
+  }),
+  methods: {
+    sendTask() {
+      console.log(this.estimative, this.taskname)
+    }
+  }
 }
 </script>
 
