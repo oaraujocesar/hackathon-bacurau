@@ -43,6 +43,7 @@ export default {
   plugins: [
     { src: '@/plugins/notifications', ssr: false },
     { src: '@/plugins/vuex-persist', ssr: false },
+    { src: '@/plugins/vue-js-modal', ssr: false },
   ],
   /*
   ** Auto import components

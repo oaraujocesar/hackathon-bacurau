@@ -1,27 +1,15 @@
 {
-  "Button": {
-    "description": "Auto imported from components/atoms/button/index.vue"
-  },
-  "LazyButton": {
-    "description": "Auto imported from components/atoms/button/index.vue"
-  },
-  "Input": {
-    "description": "Auto imported from components/atoms/input/index.vue"
-  },
-  "LazyInput": {
-    "description": "Auto imported from components/atoms/input/index.vue"
-  },
-  "Title": {
-    "description": "Auto imported from components/atoms/title/index.vue"
-  },
-  "LazyTitle": {
-    "description": "Auto imported from components/atoms/title/index.vue"
-  },
   "CategoriesCard": {
     "description": "Auto imported from components/molecules/categories-card/index.vue"
   },
   "LazyCategoriesCard": {
     "description": "Auto imported from components/molecules/categories-card/index.vue"
+  },
+  "CommentModal": {
+    "description": "Auto imported from components/molecules/comment-modal/index.vue"
+  },
+  "LazyCommentModal": {
+    "description": "Auto imported from components/molecules/comment-modal/index.vue"
   },
   "Menu": {
     "description": "Auto imported from components/molecules/menu/index.vue"
@@ -52,5 +40,59 @@
   },
   "LazySidebar": {
     "description": "Auto imported from components/organisms/sidebar/index.vue"
+  },
+  "Avatar": {
+    "description": "Auto imported from components/atoms/avatar/index.vue"
+  },
+  "LazyAvatar": {
+    "description": "Auto imported from components/atoms/avatar/index.vue"
+  },
+  "Button": {
+    "description": "Auto imported from components/atoms/button/index.vue"
+  },
+  "LazyButton": {
+    "description": "Auto imported from components/atoms/button/index.vue"
+  },
+  "Comment": {
+    "description": "Auto imported from components/atoms/comment/index.vue"
+  },
+  "LazyComment": {
+    "description": "Auto imported from components/atoms/comment/index.vue"
+  },
+  "Input": {
+    "description": "Auto imported from components/atoms/input/index.vue"
+  },
+  "LazyInput": {
+    "description": "Auto imported from components/atoms/input/index.vue"
+  },
+  "MyGoalCard": {
+    "description": "Auto imported from components/atoms/my-goal-card/index.vue"
+  },
+  "LazyMyGoalCard": {
+    "description": "Auto imported from components/atoms/my-goal-card/index.vue"
+  },
+  "PodiumItem": {
+    "description": "Auto imported from components/atoms/podium-item/index.vue"
+  },
+  "LazyPodiumItem": {
+    "description": "Auto imported from components/atoms/podium-item/index.vue"
+  },
+  "PublicGoalCard": {
+    "description": "Auto imported from components/atoms/public-goal-card/index.vue"
+  },
+  "LazyPublicGoalCard": {
+    "description": "Auto imported from components/atoms/public-goal-card/index.vue"
+  },
+  "Subgoal": {
+    "description": "Auto imported from components/atoms/subgoal/index.vue"
+  },
+  "LazySubgoal": {
+    "description": "Auto imported from components/atoms/subgoal/index.vue"
+  },
+  "Title": {
+    "description": "Auto imported from components/atoms/title/index.vue"
+  },
+  "LazyTitle": {
+    "description": "Auto imported from components/atoms/title/index.vue"
   }
 }

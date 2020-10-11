@@ -28,7 +28,7 @@ export default {
 
   li {
     width: 95px;
-    margin: 15px 0;
+    margin: 25px 0;
     border-radius: 15px;
     overflow: hidden;
     transition: all 0.1s linear;

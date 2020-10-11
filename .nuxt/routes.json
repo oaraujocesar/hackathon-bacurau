@@ -2,15 +2,36 @@
   {
     "name": "home",
     "path": "/home",
-    "component": "/Users/pedro/hackathon-bacurau/pages/home/index.vue",
+    "component": "/Users/oaraujocesar/dev/personal/hackathon-bacurau/pages/home/index.vue",
     "chunkName": "pages/home/index",
-    "_name": "_6751155c"
+    "_name": "_fd876cb0"
+  },
+  {
+    "name": "ranking",
+    "path": "/ranking",
+    "component": "/Users/oaraujocesar/dev/personal/hackathon-bacurau/pages/ranking/index.vue",
+    "chunkName": "pages/ranking/index",
+    "_name": "_d5e09eba"
+  },
+  {
+    "name": "home-educacional",
+    "path": "/home/educacional",
+    "component": "/Users/oaraujocesar/dev/personal/hackathon-bacurau/pages/home/educacional/index.vue",
+    "chunkName": "pages/home/educacional/index",
+    "_name": "_ac5cb8c6"
+  },
+  {
+    "name": "home-educacional-id",
+    "path": "/home/educacional/:id",
+    "component": "/Users/oaraujocesar/dev/personal/hackathon-bacurau/pages/home/educacional/_id/index.vue",
+    "chunkName": "pages/home/educacional/_id/index",
+    "_name": "_5c74aff0"
   },
   {
     "name": "index",
     "path": "/",
-    "component": "/Users/pedro/hackathon-bacurau/pages/index.vue",
+    "component": "/Users/oaraujocesar/dev/personal/hackathon-bacurau/pages/index.vue",
     "chunkName": "pages/index",
-    "_name": "_31a1ddf0"
+    "_name": "_6b614588"
   }
 ]

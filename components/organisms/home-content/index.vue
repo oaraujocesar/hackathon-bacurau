@@ -2,9 +2,9 @@
   <section id="home">
     <div class="home-header">
       <Title label="EducaMind" subtitle>
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-        when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+        A EducaMind é uma plataforma pensada para te ajudar a atingir suas metas,
+        em um ambiente colaborativo e que permite mensurar a sua evolução.
+        Aqui você pode receber ajuda de quem já chegou lá ou ajudar quem está no mesmo caminho que você.
       </Title>
     </div>
     

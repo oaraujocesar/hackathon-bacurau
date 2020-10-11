@@ -26,3 +26,10 @@ ul {
 a {
   text-decoration: none;
 }
+
+input {
+  &:focus,
+  &:active {
+    outline: none;
+  }
+}

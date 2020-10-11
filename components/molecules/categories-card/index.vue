@@ -71,7 +71,7 @@ export default {
 
       .card-title {
         @include paragraph(30, 900);
-        color: #DEDEDE;
+        color: #FFF;
         line-height: 37px;
         margin-bottom: 15px;
       }

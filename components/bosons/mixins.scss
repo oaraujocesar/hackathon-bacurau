@@ -72,28 +72,26 @@ $font-family: 'Roboto';
   align-items: center;
 }
 
-@mixin avatar ($size) {
+@mixin avatar($size) {
   width: $size + px;
   height: $size + px;
   border-radius: 50%;
 }
 
-@mixin scrollbar {
+@mixin scrollbar($color: #fff, $bgColor: $color-blue) {
+  /* width */
   &::-webkit-scrollbar {
     width: 10px;
   }
 
+  /* Track */
   &::-webkit-scrollbar-track {
-    background: #d0d0d0;
-    border-radius: 10px;
+    background: $bgColor;
   }
 
+  /* Handle */
   &::-webkit-scrollbar-thumb {
-    background: #888;
+    background: $color;
     border-radius: 10px;
-  }
-
-  &::-webkit-scrollbar-thumb:hover {
-    background: #777;
   }
 }

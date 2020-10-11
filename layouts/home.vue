@@ -20,7 +20,7 @@ export default {
   data: () => ({
     links: [
       {
-        path: '/home/mind',
+        path: '/home/educacional',
         icon: 'ic-mind-health',
       },
       {
@@ -50,7 +50,7 @@ export default {
     width: 100%;
     height: 100%;
     padding-left: 60px;
-    background: url('~@/assets/img/home-bg.svg') no-repeat;
+    background: #F5F4F4 url('~@/assets/img/home-bg.svg') no-repeat;
     background-size: cover;
     background-position: left 45vw center;
 
