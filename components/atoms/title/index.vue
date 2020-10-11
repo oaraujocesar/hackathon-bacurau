@@ -48,5 +48,6 @@ export default {
   .subtitle {
     @include paragraph(16);
     color: $subtitle-grey;
+    letter-spacing: initial;
   }
 </style>

@@ -1,12 +1,15 @@
 <template>
   <div class="main">
-    <Title internal label="Sua meta" />
+    <Title internal :label="goal.title" />
 
     <div class="gen">
       <PublicGoalCard
         username="Breno Machado"
+        imgPath="https://api.adorable.io/avatars/285/brenobioriful@gmail.com.png"
         level="13"
         :progress="30"
+        :tags="goal.tags"
+        :description="goal.description"
         vertical
         goalInterna
       />
@@ -46,24 +49,27 @@
       <div class="board">
         <h4>Curto prazo</h4>
         <div class="task-list">
-          <Subgoal id="asd" text="Texto em branco no caderno de maria" />
-          <Subgoal id="523" text="Texto em branco no caderno de maria" />
-          <Subgoal id="dfgdfh" text="Texto em branco no caderno de maria" />
-          <Subgoal id="dfhh" text="Texto em branco no caderno de maria" />
-          <Subgoal id="etwgs" text="Texto em branco no caderno de maria" />
-          <Subgoal id="cvncvn" text="Texto em branco no caderno de maria" />
-          <Subgoal id="dfhdfh" text="Texto em branco no caderno de maria" />
-          <Subgoal id="herhx" text="Texto em branco no caderno de maria" />
-          <Subgoal id="asz" text="Texto em branco no caderno de maria" concluded/>
-          <Subgoal id="khjukh" text="Texto em branco no caderno de maria" concluded/>
+          <div v-for="{id, taskname, estimative} in subGoals" :key="id">
+          <Subgoal v-if="estimative === 'curto'" :id="id" :text="taskname" />
+          </div>
         </div>
       </div>
       <div class="board">
         <h4>Médio prazo</h4>
+        <div class="task-list">
+        <div v-for="{id, taskname, estimative} in subGoals" :key="id">
+          <Subgoal v-if="estimative === 'medio'" :id="id" :text="taskname" />
+          </div>
+        </div>
       </div>
       <div class="board">
         <h4>Longo prazo</h4>
+        <div class="task-list">
+        <div v-for="{id, taskname, estimative} in subGoals" :key="id">
+          <Subgoal v-if="estimative === 'longo'" :id="id" :text="taskname" />
+        </div>
       </div>
+    </div>
     </div>
   </div>
 </template>
@@ -73,11 +79,22 @@ export default {
   layout: 'home',
   data: () => ({
     estimative: '',
-    taskname: ''
+    taskname: '',
+    subGoals: [
+    ]
   }),
   methods: {
     sendTask() {
-      console.log(this.estimative, this.taskname)
+      this.subGoals = [...this.subGoals, {
+        id: `subgoal-${Math.floor(Math.random() * 2418721)}`,
+        estimative: this.estimative,
+        taskname: this.taskname,
+      }]
+    }
+  },
+  computed: {
+    goal(){
+      return this.$store.state.educacional.goal
     }
   }
 }
@@ -147,8 +164,6 @@ export default {
         overflow-y: auto;
         @include scrollbar($color-blue, '#FFF');
         height: 90%;
-
-        
       }
     }
   }
@@ -164,6 +179,8 @@ export default {
       width: 150px !important;
       height: 150px !important;
       border-width: 6px !important;
+      background-size: cover !important;
+      background-repeat: no-repeat !important;
 
       .userlevel {
         border-width: 6px !important;

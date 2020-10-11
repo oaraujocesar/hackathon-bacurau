@@ -24,15 +24,15 @@ export default {
         icon: 'ic-mind-health',
       },
       {
-        path: '/home/health',
+        path: '/home/integral',
         icon: 'ic-health',
       },
       {
-        path: '/home/people',
+        path: '/home/social',
         icon: 'ic-people',
       },
       {
-        path: '/home/progress',
+        path: '/home/profissional',
         icon: 'ic-progress',
       },
     ]

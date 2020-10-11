@@ -2,7 +2,7 @@
   <div class="task">
     <label :for="'id-' + id">
       <input type="checkbox" :disabled="isConcluded || concluded" @change="checkHandler" :checked="isConcluded || concluded" :name="id" :id="'id-' + id" />
-      <p :style="isConcluded || concluded ? 'color: #909090; text-decoration: line-through;' : null">Texto em branco, no caderno de maria</p>
+      <p :style="isConcluded || concluded ? 'color: #909090; text-decoration: line-through;' : null">{{text}}</p>
     </label>
     <div class="control">
       <span :style="isConcluded || concluded ? 'color: #167070; cursor: initial' : null" @click="!isConcluded || !concluded? remove() : null">{{ controlText }}</span>

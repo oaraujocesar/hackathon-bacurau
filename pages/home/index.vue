@@ -12,7 +12,7 @@ export default {
   data: () => ({
     links: [
       {
-        path: '/home/mind',
+        path: '/home/educacional',
         icon: 'ic-mind-health',
         title: 'Saúde Educacional',
         content: `
@@ -24,7 +24,7 @@ export default {
         `
       },
       {
-        path: '/home/health',
+        path: '/home/integral',
         icon: 'ic-health',
         title: 'Saúde Integral',
         content: `
@@ -36,7 +36,7 @@ export default {
         `
       },
       {
-        path: '/home/people',
+        path: '/home/social',
         icon: 'ic-people',
         title: 'Saúde Social',
         content: `
@@ -48,7 +48,7 @@ export default {
         `
       },
       {
-        path: '/home/progress',
+        path: '/home/profissional',
         icon: 'ic-progress',
         title: 'Saúde Profissional',
         content: `

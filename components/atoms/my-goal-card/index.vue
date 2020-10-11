@@ -1,7 +1,7 @@
 <template>
   <section class="my-goal">
     <div class="header">
-      <h3 @click="goToInternalPage">Emagrecer 10kg em 10 dias</h3>
+      <h3 @click="goToInternalPage">{{title}}</h3>
       <div class="controls">
         <span>
           <img src="~/assets/img/ic-edit.svg" alt="" />
@@ -12,16 +12,11 @@
       </div>
     </div>
     <div class="tags">
-      <span class="tag">#saúde</span>
-      <span class="tag">#emagrecimento</span>
-      <span class="tag">#vida</span>
+      <span class="tag" v-for="(tag, index) in tags" :key="'tag-' + index">{{tag}}</span>
     </div>
     <div class="description">
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-        auctor urna vel eros blandit viverra. Integer sodales placerat dictum.
-        Cras a augue in lorem aliquam cursus. Pellentesque luctus eros eget quam
-        maximus porttitor.
+        {{description}}
       </p>
     </div>
   </section>
@@ -30,8 +25,23 @@
 <script>
 export default {
   name: 'MyGoalCard',
+  props: {
+    title: {
+      type: String,
+      default: () => '',
+    },
+    description: {
+      type: String,
+      default: () => '',
+    },
+    tags: {
+      type: Array,
+      default: () => [],
+    }
+  },
   methods: {
-    goToInternalPage() {
+    async goToInternalPage() {
+      await this.$store.commit('educacional/SET_GOAL', {title: this.title, tags: this.tags, description: this.description})
       this.$router.push('/home/educacional/1')
     }
   }

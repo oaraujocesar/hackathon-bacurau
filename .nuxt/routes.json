@@ -2,36 +2,78 @@
   {
     "name": "home",
     "path": "/home",
-    "component": "/Users/oaraujocesar/dev/personal/hackathon-bacurau/pages/home/index.vue",
+    "component": "/Users/pedro/hackathon-bacurau/pages/home/index.vue",
     "chunkName": "pages/home/index",
-    "_name": "_fd876cb0"
+    "_name": "_6751155c"
   },
   {
     "name": "ranking",
     "path": "/ranking",
-    "component": "/Users/oaraujocesar/dev/personal/hackathon-bacurau/pages/ranking/index.vue",
+    "component": "/Users/pedro/hackathon-bacurau/pages/ranking/index.vue",
     "chunkName": "pages/ranking/index",
-    "_name": "_d5e09eba"
+    "_name": "_6314d86f"
   },
   {
     "name": "home-educacional",
     "path": "/home/educacional",
-    "component": "/Users/oaraujocesar/dev/personal/hackathon-bacurau/pages/home/educacional/index.vue",
+    "component": "/Users/pedro/hackathon-bacurau/pages/home/educacional/index.vue",
     "chunkName": "pages/home/educacional/index",
-    "_name": "_ac5cb8c6"
+    "_name": "_a7a2fd5e"
+  },
+  {
+    "name": "home-integral",
+    "path": "/home/integral",
+    "component": "/Users/pedro/hackathon-bacurau/pages/home/integral/index.vue",
+    "chunkName": "pages/home/integral/index",
+    "_name": "_194259d6"
+  },
+  {
+    "name": "home-profissional",
+    "path": "/home/profissional",
+    "component": "/Users/pedro/hackathon-bacurau/pages/home/profissional/index.vue",
+    "chunkName": "pages/home/profissional/index",
+    "_name": "_56fea168"
+  },
+  {
+    "name": "home-social",
+    "path": "/home/social",
+    "component": "/Users/pedro/hackathon-bacurau/pages/home/social/index.vue",
+    "chunkName": "pages/home/social/index",
+    "_name": "_69a49316"
   },
   {
     "name": "home-educacional-id",
     "path": "/home/educacional/:id",
-    "component": "/Users/oaraujocesar/dev/personal/hackathon-bacurau/pages/home/educacional/_id/index.vue",
+    "component": "/Users/pedro/hackathon-bacurau/pages/home/educacional/_id/index.vue",
     "chunkName": "pages/home/educacional/_id/index",
-    "_name": "_5c74aff0"
+    "_name": "_7a548bbc"
+  },
+  {
+    "name": "home-integral-id",
+    "path": "/home/integral/:id",
+    "component": "/Users/pedro/hackathon-bacurau/pages/home/integral/_id/index.vue",
+    "chunkName": "pages/home/integral/_id/index",
+    "_name": "_29be5b80"
+  },
+  {
+    "name": "home-profissional-id",
+    "path": "/home/profissional/:id",
+    "component": "/Users/pedro/hackathon-bacurau/pages/home/profissional/_id/index.vue",
+    "chunkName": "pages/home/profissional/_id/index",
+    "_name": "_9ccd7792"
+  },
+  {
+    "name": "home-social-id",
+    "path": "/home/social/:id",
+    "component": "/Users/pedro/hackathon-bacurau/pages/home/social/_id/index.vue",
+    "chunkName": "pages/home/social/_id/index",
+    "_name": "_f19b99fe"
   },
   {
     "name": "index",
     "path": "/",
-    "component": "/Users/oaraujocesar/dev/personal/hackathon-bacurau/pages/index.vue",
+    "component": "/Users/pedro/hackathon-bacurau/pages/index.vue",
     "chunkName": "pages/index",
-    "_name": "_6b614588"
+    "_name": "_31a1ddf0"
   }
 ]

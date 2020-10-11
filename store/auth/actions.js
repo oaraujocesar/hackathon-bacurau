@@ -3,16 +3,18 @@ export default {
     try {
       if(email.length && password.length){
       const {
-        data
+        data: {token, user}
       } = await this.$axios.post('/client/auth/signin', {
         email,
         password,
       })
-      this.$axios.setHeader('Authorization', `Bearer ${data.token}`)
-      commit('SET_TOKEN', data.token)
+
+      this.$axios.setHeader('Authorization', `Bearer ${token.token}`)
+      commit('SET_TOKEN', token.token)
+      commit('SET_USER_DATA', user)
       this.$router.push('/home')
 
-      commit('TOGGLE_LOADING', false, { root: true })
+      // commit('TOGGLE_LOADING', false, { root: true })
 
       // setTimeout(() => {
       //   commit(
@@ -55,12 +57,12 @@ export default {
       //   text: 'UHUUU... Seja bem-vindo.'
       // })
       
-      // await this.$axios.post('/client/auth/signon', {
-      //   name: firstName,
-      //   last: lastName,
-      //   email,
-      //   password
-      // })
+      await this.$axios.post('/client/auth/signon', {
+        name: firstName,
+        last: lastName,
+        email,
+        password
+      })
     }
     } catch (error) {
       commit('TOGGLE_LOADING', false, { root: true })

@@ -10,11 +10,11 @@
             <h2>Nova meta</h2>
           </div>
           <div class="modal-body">
-            <input type="text" placeholder="Título">
-            <input type="text" placeholder="Tags #obesidade,#emagrecimento,#motivacao">
-            <Textfield label="" control-type="textarea" placeholder="descrição" />
+            <input type="text" v-model="newGoal.title" placeholder="Título">
+            <input type="text" v-model="newGoal.tags" placeholder="Tags #obesidade,#emagrecimento,#motivacao">
+            <Textfield label="" v-model="newGoal.description" control-type="textarea" placeholder="descrição" />
             <label for="public">
-              <input type="checkbox" name="public" id="public">
+              <input type="checkbox"  v-model="newGoal.public" name="public" id="public">
               Público
             </label>
           </div>
@@ -22,17 +22,21 @@
             <span @click="hide">Cancelar</span>
 
             <div class="modal-btn">
-              <Button label="Salvar" />
+              <Button label="Salvar" @click="addnewGoal"/>
             </div>
           </div>
           </client-only>
         </modal>
         <div class="my-goals-wrapper">
-          <MyGoalCard />
-          <MyGoalCard />
-          <MyGoalCard />
-          <MyGoalCard />
-          <MyGoalCard />
+          <div v-if="goalCards.length">
+            <MyGoalCard 
+              v-for="({title, tags, description}, index) in goalCards" 
+              :key="'my-goal-' + index"
+              :title="title"
+              :tags="tags"
+              :description="description"
+              />
+          </div>
         </div>
         <div class="btn-wrapper">
           <Button @click="show()" label="Nova meta" />
@@ -48,13 +52,19 @@
         </div>
         <div class="public-goals-list">
           <PublicGoalCard
-          v-for="(publicGoal, index) in publics"
+          v-for="({username, avatar, level, title, description, tags, progress, comments}, index) in publicGoalCards"
           :index="'modal-'+index"
           :key="index"
-          username="Wanderley Andrade"
-          imgPath="https://api.adorable.io/avatars/285/silvasantospedro91@gmail.comas.png"
-          level="22"
-          :progress="30" />
+          :username="username"
+          :imgPath="avatar"
+          :level="level"
+          :title="title"
+          :description="description"
+          :tags="tags"
+          :progress="progress"
+          :comments="comments"
+          @send-comment="(value) => handleComment(publicGoalCards[index], index, value)"
+          />
         </div>
       </section>
     </div>
@@ -70,7 +80,68 @@ export default {
     }
   },
   data: () => ({
-    publics: 5
+    goalCards: [
+      {
+        title: "Aprender Flutter",
+        tags: ['#programação', '#tecnologia', '#aprendizado'],
+        description: 'orem ipsum dolor sit amet, consectetur adipiscing elit. Nulla dapibus erat quis sem finibus ultricies. Sed nisi elit, sollicitudin sed urna in, volutpat mattis ligula. Phasellus efficitur faucibus odio sed pretium. Vestibulum commodo et massa sit amet commodo.'
+      },
+      {
+        title: "Finalizar a graduação",
+        tags: ['#universidade', '#graduação', '#aprendizado'],
+        description: 'orem ipsum dolor sit amet, consectetur adipiscing elit. Nulla dapibus erat quis sem finibus ultricies. Sed nisi elit, sollicitudin sed urna in, volutpat mattis ligula. Phasellus efficitur faucibus odio sed pretium. Vestibulum commodo et massa sit amet commodo.'
+      },
+      {
+        title: "Aprender Alemão",
+        tags: ['#cultura', '#linguas', '#aprendizado'],
+        description: 'orem ipsum dolor sit amet, consectetur adipiscing elit. Nulla dapibus erat quis sem finibus ultricies. Sed nisi elit, sollicitudin sed urna in, volutpat mattis ligula. Phasellus efficitur faucibus odio sed pretium. Vestibulum commodo et massa sit amet commodo.'
+      },
+    ],
+    publicGoalCards: [
+      {
+        username: 'Evandro Luís',
+        level: '33',
+        avatar: 'https://api.adorable.io/avatars/285/evanderholliday@gmail.comas.png',
+        title: "Finalizar a graduação",
+        tags: ['#programação', '#tecnologia', '#aprendizado'],
+        progress: 75,
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla dapibus erat quis sem finibus ultricies. Sed nisi elit, sollicitudin sed urna in, volutpat mattis ligula. Phasellus efficitur faucibus odio sed pretium. Vestibulum commodo et massa sit amet commodo.',
+        comments: [
+          {
+            username: 'Pedro Silva',
+            avatar: 'https://api.adorable.io/avatars/285/peueueu@gmail.com.png',
+            createdAt: '20/05/2020 - 20:20',
+            content: 'Força na sua caminhada amigo :)',
+          }
+        ]
+      },
+      {
+        username: 'César Araújo',
+        level: '80',
+        avatar: 'https://api.adorable.io/avatars/285/oaraujocesar@gmail.com.png',
+        title: "Aprender Flutter",
+        tags: ['#programação', '#tecnologia', '#aprendizado'],
+        progress: 95,
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla dapibus erat quis sem finibus ultricies. Sed nisi elit, sollicitudin sed urna in, volutpat mattis ligula. Phasellus efficitur faucibus odio sed pretium. Vestibulum commodo et massa sit amet commodo.',
+        comments: [
+          {
+            username: 'Pedro Silva',
+            avatar: 'https://api.adorable.io/avatars/285/peueueu@gmail.com.png',
+            createdAt: '20/05/2020 - 20:20',
+            content: 'Força na sua caminhada amigo, tenho fé que irás concluir rapidamente! :)',
+          }
+        ]
+      },
+    ],
+
+    newGoal: {
+      title: '',
+      tags: [],
+      description: '',
+      public: false
+    },
+
+    newComment: '',
   }),
   methods: {
     show() {
@@ -79,6 +150,40 @@ export default {
     hide() {
       this.$modal.hide('my-first-modal')
     },
+
+    addnewGoal() {
+      if (!this.newGoal.public) {
+        console.log(this.newGoal)
+        const tags = this.newGoal.tags.split(',')
+        this.goalCards = [...this.goalCards, { 
+          title: this.newGoal.title,
+          tags, 
+          description: this.newGoal.description  
+          }]
+      } else {
+        const tags = this.newGoal.tags.split(',')
+        this.publicGoalCards = [...this.publicGoalCards, {
+              username: 'César Araújo',
+              level: '80',
+              avatar: 'https://api.adorable.io/avatars/285/oaraujocesar@gmail.com.png',
+              title: this.newGoal.title,
+              progress: 95,
+              tags,
+              description: this.newGoal.description,
+              comments: []
+        }]
+        
+      }
+    },
+    handleComment(goal, index, value){
+      const rawDate = new Date()
+      goal.comments.push({
+        username: 'Pedro Silva',
+        avatar: 'https://api.adorable.io/avatars/285/peueueu@gmail.com.png',
+        createdAt: `${rawDate.toLocaleDateString('pt-br')} - ${rawDate.toLocaleTimeString('pt-br', {hour: '2-digit', minute: '2-digit'})}`,
+        content: value,
+      })
+    }
   },
 }
 </script>

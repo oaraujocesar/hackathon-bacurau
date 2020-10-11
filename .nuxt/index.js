@@ -13,8 +13,8 @@ import { createStore } from './store.js'
 
 /* Plugins */
 
-import nuxt_plugin_plugin_2e08dc68 from 'nuxt_plugin_plugin_2e08dc68' // Source: ./components/plugin.js (mode: 'all')
-import nuxt_plugin_axios_241de23c from 'nuxt_plugin_axios_241de23c' // Source: ./axios.js (mode: 'all')
+import nuxt_plugin_plugin_9a247300 from 'nuxt_plugin_plugin_9a247300' // Source: ./components/plugin.js (mode: 'all')
+import nuxt_plugin_axios_07a5b196 from 'nuxt_plugin_axios_07a5b196' // Source: ./axios.js (mode: 'all')
 import nuxt_plugin_notifications_3edb2b74 from 'nuxt_plugin_notifications_3edb2b74' // Source: ../plugins/notifications (mode: 'client')
 import nuxt_plugin_vuexpersist_61a29aad from 'nuxt_plugin_vuexpersist_61a29aad' // Source: ../plugins/vuex-persist (mode: 'client')
 import nuxt_plugin_vuejsmodal_1dce8cf8 from 'nuxt_plugin_vuejsmodal_1dce8cf8' // Source: ../plugins/vue-js-modal (mode: 'client')
@@ -199,12 +199,12 @@ async function createApp(ssrContext, config = {}) {
   }
   // Plugin execution
 
-  if (typeof nuxt_plugin_plugin_2e08dc68 === 'function') {
-    await nuxt_plugin_plugin_2e08dc68(app.context, inject)
+  if (typeof nuxt_plugin_plugin_9a247300 === 'function') {
+    await nuxt_plugin_plugin_9a247300(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_axios_241de23c === 'function') {
-    await nuxt_plugin_axios_241de23c(app.context, inject)
+  if (typeof nuxt_plugin_axios_07a5b196 === 'function') {
+    await nuxt_plugin_axios_07a5b196(app.context, inject)
   }
 
   if (process.client && typeof nuxt_plugin_notifications_3edb2b74 === 'function') {
